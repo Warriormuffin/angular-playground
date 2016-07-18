@@ -1,4 +1,4 @@
-;(function () {
+(function () {
   angular.module('angularPlayground')
     .component('controllersComponent', {
       controller: ControllersController,
@@ -6,6 +6,19 @@
     })
 
   function ControllersController () {
-    this.controllersStatus = 'Working'
+    var af = this
+
+    af.controllersStatus = 'Working'
+
+
+     af.friends =['Joey', 'Chandler', 'Monica', 'Phebes', 'Ross & Rachel']
+
+    af.addFriends = function(friend){
+      af.friends.push(friend);
+      af.friend = ""
+
+    }
+
+
   }
 }())
